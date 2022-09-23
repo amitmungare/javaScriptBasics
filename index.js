@@ -129,3 +129,5 @@ if(sam == tom){
 }else{
     console.log("no")
 }
+
+console.log("stopped timing: 1:27:46 " );
