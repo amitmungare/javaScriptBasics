@@ -130,4 +130,172 @@ if(sam == tom){
     console.log("no")
 }
 
-console.log("stopped timing: 1:27:46 " );
+
+// golf score 
+
+var birdNames = ['eagle', 'birdie', 'par', 'bogey'];
+
+function golfScore(par, strokes){
+
+    if(strokes==1){
+        return birdNames[0];
+    }else if(strokes<=par-2){
+        return birdNames[1];
+    }else if(strokes==par-1){
+        return birdNames[2];
+    }else if(strokes==par){
+        return birdNames[3];
+    }
+    return "change me";
+}
+
+console.log(golfScore(4, 1345));
+
+
+// switch statement 
+
+function caseInSwitch(val){
+
+    var op="null";
+    switch(val){
+        case 1:
+            op =  "one";
+            break;
+        case 2:
+            op =  "two";
+            break;
+        case 3:
+            op =  "three";
+            break;
+        case 4:
+            op =  "four";
+            break;
+        case 5:
+            op =  "five";
+            break;
+        case 6:
+            op =  "six";
+            break;
+        default:
+            op =  "good"
+            break;
+    }
+    return op;
+}
+
+console.log(caseInSwitch(2));
+
+
+
+
+// returing boolean statement 
+function aIsLessThenb(a, b){
+    return a<b;
+}
+console.log(aIsLessThenb(2,4))
+
+
+
+
+// objects in js 
+var dogObject ={
+    "name":"tom",
+    "age":10,
+    "color":"brown",
+    "friends":["sam", "mos"],
+    "dog sound": "bak bak"
+}
+
+console.log(dogObject.name);
+console.log(dogObject.friends);
+console.log(dogObject["dog sound"]);
+dogObject.name = "pink";
+dogObject.smell = "good";
+console.log(dogObject.name);
+console.log(dogObject.smell);
+delete dogObject.age;
+
+
+// while loop
+
+var i=6;
+while(i<8){
+    console.log(i);
+    i++;
+}
+// for loop 
+for(var j=0; j<2; j++){
+    console.log(j);
+}
+
+
+// random number in js 
+console.log(Math.random()*10);
+console.log(Math.floor(Math.random()*10));
+
+
+// converting string to integer 
+var sss = "456";
+console.log(parseInt(sss));
+
+
+// condition ? statement if true : if false 
+var x;
+(a<b) ? x=true: x=false;
+console.log(x)
+
+// let and var 
+
+let cat = "mics";
+cat = "mic";
+console.log(cat);
+
+let lll;
+var vvv;
+
+function scope(){
+
+    if(true){
+        let lll = "let";
+        var vvv = "var";
+    }
+    console.log(lll);
+    console.log(vvv);
+
+}
+scope();
+// imp note : let can be only used in the area that it is defined 
+// const is like let but it cant be changed 
+// const is read only 
+
+
+// function with no name 
+var magic  = () =>{
+    console.log("function with no name");
+}
+
+
+var magics  = (a, b) =>{
+    console.log("function with no name but with parameters");
+}
+
+
+var arrays = [1,2,3,4];
+// map in js 
+console.log(arrays.map(x => x*x));
+
+// rest operator
+
+const sumss = (function() {
+    return function sumss(...argss){
+       return argss.reduce((a,b)=>a+b, 0)
+   }
+})();
+
+
+console.log(sumss(1,2,3))
+
+name = "Amit"
+const xyz = `my name is ${name}`;
+console.log(xyz);
+
