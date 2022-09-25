@@ -1,0 +1,2 @@
+# javaScriptBasics
+going throught js
